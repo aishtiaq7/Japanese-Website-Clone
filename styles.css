@@ -1,0 +1,67 @@
+*,*::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Remove Default Button Styles */
+button {
+    cursor: pointer;
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+  }
+  
+  button:hover {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+  }
+  
+  button:active {
+    outline: none;
+    border: none;
+  }
+  
+  button:focus {
+    outline: 0;
+  }
+
+:root{
+    
+}
+
+body{
+
+    /* Paper Texture */
+    background-image: url("./images/olga-thelavart-vS3idIiYxX0-unsplash.jpg");
+    background-repeat: repeat-y;
+    /* background-position: center; */
+    /* background-size: cover; */
+    width: 100vw;
+    height: auto;
+} 
+
+.logo{
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    padding: 20px;
+}
+.logo img{
+    width: 70px;
+    height: auto;
+}
+
+.header{
+    position: relative;
+    border: 2px solid red;
+}
+.toggleNavButton .toggle-btn{
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    padding: 20px;
+}

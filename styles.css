@@ -3,6 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* ******* GLOBAL VALUES ******* */
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
 
 /* Remove Default Button Styles */
 button {
@@ -38,10 +43,13 @@ body{
     /* Paper Texture */
     background-image: url("./images/olga-thelavart-vS3idIiYxX0-unsplash.jpg");
     background-repeat: repeat-y;
+    background-repeat: repeat-x;
     /* background-position: center; */
     /* background-size: cover; */
     width: 100vw;
-    height: auto;
+
+    /* TODO: Remove the below code  */
+    height: 300vh; 
 } 
 
 .logo{
@@ -58,10 +66,33 @@ body{
 .header{
     position: relative;
     border: 2px solid red;
+    height: 100vh;
 }
 .toggleNavButton .toggle-btn{
-    position: absolute;
+    position: fixed;
     top: 2%;
     right: 3%;
+
     padding: 20px;
 }
+
+
+
+.about-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.about-img{
+  width: 30%;
+}
+.about-img img{
+  width: 100%;
+}
+
+.about-text{
+  width: 50%;
+}
+

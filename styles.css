@@ -41,7 +41,8 @@ button {
 body{
 
     /* Paper Texture */
-    background-image: url("./images/olga-thelavart-vS3idIiYxX0-unsplash.jpg");
+    /* background-image: url("./images/olga-thelavart-vS3idIiYxX0-unsplash.jpg"); */
+    background-color: rgb(214, 214, 214);
     background-repeat: repeat-y;
     background-repeat: repeat-x;
     /* background-position: center; */
@@ -49,7 +50,7 @@ body{
     width: 100vw;
 
     /* TODO: Remove the below code  */
-    height: 300vh; 
+    height: 950vh; 
 } 
 
 .logo{
@@ -65,14 +66,12 @@ body{
 
 .header{
     position: relative;
-    border: 2px solid red;
     height: 100vh;
 }
 .toggleNavButton .toggle-btn{
     position: fixed;
     top: 2%;
     right: 3%;
-
     padding: 20px;
 }
 
@@ -95,4 +94,37 @@ body{
 .about-text{
   width: 50%;
 }
+.horizontal-divider{
+  background-color: rgb(201, 201, 201);
+  width: 200px;
+  height: 2px;
+  border-radius: 50%;
+}
+.about-text h5{
+  padding: 10px 20px;
+  font-size: 36px;
+  color: grey;
 
+}
+
+
+.about-section .about-text p{
+  padding: 20px;
+  margin: 10px 20px;
+  color: brown;
+}
+
+.about-section .about-img{
+  padding: 20px;
+}
+
+
+#standout{
+  transform: translateY(20%);
+
+}
+
+.inside-div h5{
+  font-size: 38px;
+  padding: 30px;
+}

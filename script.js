@@ -37,3 +37,9 @@ AOS.init({
 //     console.log(aboutTarget);
 //     aboutTarget.innerText = 'about';
 //   });
+
+
+// Apply header-shifting images:
+window.addEventListener('DOMContentLoaded', ()=>{
+   console.log('inside function');
+});

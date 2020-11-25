@@ -79,21 +79,27 @@ body{
 
 .shifting-backgrounds{
   position: relative;
+  overflow: hidden;
+  max-height: 100%;
+
   
 }
 .shifting-backgrounds img{
-  /* overflow: hidden; */
+
   width: 100vw;
-  position: absolute;
-  left: 0px;
-  top: 0px;
+
+  position: relative;
+
   background-position: center; 
-  background-size: cover; 
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-height: 100%;
+  z-index: -8;
   
 }
 
-.show{
-  display: '';
+.hide{
+  opacity: 0;
 }
 
 

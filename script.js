@@ -1,3 +1,4 @@
+//USING A NEW LIBRARY 
 AOS.init({
    // Global settings:
    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -19,21 +20,20 @@ AOS.init({
    mirror: true, // whether elements should animate out while scrolling past them
    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
-//USING A NEW LIBRARY 
 
-const aboutTarget = document.querySelector('#about-target');
+// const aboutTarget = document.querySelector('#about-target');
 
 
-document.addEventListener('aos:in', ({ detail }) => {
-    console.log(detail);
-    console.log('in');
-    console.log(aboutTarget);
-    aboutTarget.innerText = 'nothing';
+// document.addEventListener('aos:in', ({ detail }) => {
+//     console.log(detail);
+//     console.log('in');
+//     console.log(aboutTarget);
+//     aboutTarget.innerText = 'nothing';
     
-  });
+//   });
   
-  document.addEventListener('aos:out', ({ detail }) => {
-    console.log('out');
-    console.log(aboutTarget);
-    aboutTarget.innerText = 'about';
-  });
+//   document.addEventListener('aos:out', ({ detail }) => {
+//     console.log('out');
+//     console.log(aboutTarget);
+//     aboutTarget.innerText = 'about';
+//   });

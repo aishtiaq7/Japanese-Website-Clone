@@ -22,23 +22,11 @@ AOS.init({
 });
 
 const slideShow = document.querySelector('.slideShow');
-console.log(slideShow);
-
 
 // Apply header-shifting images:
 window.addEventListener('DOMContentLoaded', ()=>{
    
-
-  
-   var imageIndex =1; // 0 to 4; 
-   setInterval( () =>{
-      changeImageSrc(imageIndex);
-      imageIndex++;
-      if (imageIndex >4){
-         imageIndex= 1;
-      }
-   }, 3000)
-
+   setupSlideShow();
 
 });
 
@@ -59,5 +47,17 @@ function changeImageSrc(slideNumber) {
    // slideShow.classList.toggle('imgAnimation');
 
    
+
+}
+function setupSlideShow(){
+   
+   var imageIndex =1; // 0 to 4; 
+   setInterval( () =>{
+      changeImageSrc(imageIndex);
+      imageIndex++;
+      if (imageIndex >4){
+         imageIndex= 1;
+      }
+   }, 4000)
 
 }

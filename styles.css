@@ -57,11 +57,11 @@ body{
     z-index: 20;
     position: absolute;
     top: 2%;
-    left: 3%;
+    left: 2%;
     padding: 20px;
 }
 .logo img{
-    width: 70px;
+    width: 90px;
     height: auto;
 }
 
@@ -96,31 +96,54 @@ body{
   background-repeat: no-repeat;
   max-height: 100%;
   /* opacity: 0; */
+  transition: all 3.0s ease-in-out;
   
-}
+} 
 .imgAnimation{
   /* opacity: 1; */
-  animation: mymove 4s infinite ease-out;
+  animation-fill-mode: forwards;
+  animation: mymove 3s infinite ease-in-out;
+
 }
 
-.imgAnimation2{
-  /* opacity: 1; */
-  animation: mymove 4s infinite ease-out;
+.fade{
+  opacity: 1;
 }
+
 
 @keyframes mymove {
   0% {opacity: 0;}
   50% {opacity: 1;}
   100% {opacity: 0;}
 }
-.hide{
-  opacity: 0;
+.hide  {
+  animation: hide .5s;
+  animation-fill-mode: both;
 }
-
-.show{
-  opacity: 1;
+@keyframes hide {
+  from {
+      transform:scale(1);
+      opacity:1
+  }
+  to {
+      transform:scale(0.7);
+      opacity:0
+  }
 }
-
+.show  {
+  animation: show .5s;
+  animation-fill-mode: both;
+}
+@keyframes show {
+  from {
+      transform:scale(0.7);
+      opacity:0
+  }
+  to {
+      transform: scale(1);
+      opacity:1
+  }
+}
 
 .about-section{
   display: flex;

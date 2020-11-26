@@ -21,25 +21,43 @@ AOS.init({
    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
 
-// const aboutTarget = document.querySelector('#about-target');
-
-
-// document.addEventListener('aos:in', ({ detail }) => {
-//     console.log(detail);
-//     console.log('in');
-//     console.log(aboutTarget);
-//     aboutTarget.innerText = 'nothing';
-    
-//   });
-  
-//   document.addEventListener('aos:out', ({ detail }) => {
-//     console.log('out');
-//     console.log(aboutTarget);
-//     aboutTarget.innerText = 'about';
-//   });
+const slideShow = document.querySelector('.slideShow');
+console.log(slideShow);
 
 
 // Apply header-shifting images:
 window.addEventListener('DOMContentLoaded', ()=>{
-   console.log('inside function');
+   
+
+  
+   var imageIndex =1; // 0 to 4; 
+   setInterval( () =>{
+      changeImageSrc(imageIndex);
+      imageIndex++;
+      if (imageIndex >4){
+         imageIndex= 1;
+      }
+   }, 3000)
+
+
 });
+
+function changeImageSrc(slideNumber) {
+      
+   // console.log(`slideNumber = ${slideNumber}`);
+   // <img class="slideShow" src="./images/banner01_desk.png" alt="alt shifting-background img1">
+   var destination = `./images/banner0${slideNumber}_desk.png`;
+   // console.log(`destination = ${destination}`);
+
+   // var index = slideNumber - 1;
+
+   // slideShow[index].classList.add('hide');
+
+   slideShow.setAttribute('src', destination)
+
+
+   // slideShow.classList.toggle('imgAnimation');
+
+   
+
+}

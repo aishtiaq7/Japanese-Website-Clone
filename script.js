@@ -51,7 +51,7 @@ function changeImageSrc(slideNumber) {
 }
 function setupSlideShow(){
    
-   var imageIndex =1; // 0 to 4; 
+   var imageIndex =2; // 0 to 4; 
    setInterval( () =>{
       changeImageSrc(imageIndex);
       imageIndex++;

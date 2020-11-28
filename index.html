@@ -1,13 +1,20 @@
+<!--
+TODO:
+-Feature Parallax effect on About Section
+-Do simple animation on About Section 
+-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="referrer" content="strict-origin" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TITLE HER</title>
-
-
+    <title>Japanese Website Clone</title>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link type="text/css" rel="stylesheet" href="./styles.css">
 </head>
@@ -26,57 +33,39 @@
         <!-- shifting backgrounds -->
         <div class="shifting-backgrounds">
             <img class="slideShow imgAnimation" src="./images/banner01_desk.png" alt="alt shifting-background img1">
-            <!-- <img class="shift-img" src="./images/banner02_desk.png" alt="alt shifting-background img2">
-            <img class="shift-img" src="./images/banner03_desk.png" alt="alt shifting-background img3">
-            <img class="shift-img" src="./images/banner04_desk.png" alt="alt shifting-background img4"> -->
         </div>
     </section>
 
     <section class="about-section container" id="about">
-
         <div class="about-img">
             <img src="./images/guyPortrait.PNG" a >
         </div>
         
-        <img src="./images/block_paint_img.png" alt="alt-block_paint_img.png">
+        <img  src="./images/block_paint_img.png" alt="alt-block_paint_img.png">
 
-        <div data-aos="fade-right"   class="about-text">
-            <h5 id="about-target" >About</h5>
+        <div class="about-text">
+            <h5 data-aos="zoom-in-right" id="about-target" >About</h5>
             
             <div class="horizontal-divider"></div>
             
             <p >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus dolorem, 
-                illum aspernatur iusto alias voluptates quos nemo reiciendis aliquid perspici
-                atis amet dolores magni minima doloremque ullam! Reprehenderit accusantium no
-                strum beatae dolores veniam ipsam provident, quae inventore a quas molestias 
-                eligendi, voluptatum voluptatibus, aliquid id culpa labore vero ducimus eaque facilis?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus dolorem, 
-                illum aspernatur iusto alias voluptates quos nemo reiciendis aliquid perspici
-                atis amet dolores magni minima doloremque ullam! Reprehenderit accusantium no
-                strum beatae dolores veniam ipsam provident, quae inventore a quas molestias 
-                eligendi, voluptatum voluptatibus, aliquid id culpa labore vero ducimus eaque f
+                <span data-aos="zoom-in-right" > strum beatae dolores veniam ipsam provident, quae inventore a quas molestias </span>
+                <span data-aos="zoom-in-right" > eligendi, voluptatum voluptatibus, aliquid id culpa labore vero ducimus eaque facilis?</span>
+                <span data-aos="zoom-in-right" > illum aspernatur iusto alias voluptates quos nemo reiciendis aliquid perspici</span>
+                <span data-aos="zoom-in-right" > atis amet dolores magni minima doloremque ullam! Reprehenderit accusantium no</span>
+                <span data-aos="zoom-in-right" > ipsum dolor sit, amet consectetur adipisicing elit. Accusamus dolorem, </span>
+                <span data-aos="zoom-in-right" >  ipsum dolor sit, amet consectetur adipisicing elit. Accusamus dolorem, </span>
+                <span data-aos="zoom-in-right" > illum aspernatur iusto alias voluptates quos nemo reiciendis aliquid perspici</span>
+                <span data-aos="zoom-in-right" > atis amet dolores magni minima doloremque ullam! Reprehenderit accusantium no</span>
+                <span data-aos="zoom-in-right" > strum beatae dolores veniam ipsam provident, quae inventore a quas molestias </span>
+                <span data-aos="zoom-in-right" > eligendi, voluptatum voluptatibus, aliquid id culpa labore vero ducimus eaque f</span>
             </p>
         </div>
     </section>
-
-    <!-- TO TEST ANIMATIONS FROM AOS - 'ANIMATION ON SCROLL' -->
-    <!-- <div >
-        <div data-aos="zoom-out" class="inside-div">
-            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit quia voluptatum repellat veniam nisi a maiores libero quae. Accusamus nam est porro alias quo, totam sed dignissimos architecto eius.</h5>
-
-            
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora assumenda unde ut maxime praesentium reiciendis inventore aliquid aut? Qui nemo numquam error ea perspiciatis quia doloremque cumque libero a eaque?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora assumenda unde ut maxime praesentium reiciendis inventore aliquid aut? Qui nemo numquam error ea perspiciatis quia doloremque cumque libero a eaque?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora assumenda unde ut maxime praesentium reiciendis inventore aliquid aut? Qui nemo numquam error ea perspiciatis quia doloremque cumque libero a eaque?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora assumenda unde ut maxime praesentium reiciendis inventore aliquid aut? Qui nemo numquam error ea perspiciatis quia doloremque cumque libero a eaque?</p>
-        </div>
-    </div> -->
-    
-
-
     
 </body>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Animation Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+
     <script src="./script.js"></script>
 </html>

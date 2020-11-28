@@ -12,7 +12,7 @@ AOS.init({
    
  
    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-   offset: 120, // offset (in px) from the original trigger point
+   offset: 80, // offset (in px) from the original trigger point
    delay: 0, // values from 0 to 3000, with step 50ms
    duration: 350, // values from 0 to 3000, with step 50ms
    easing: 'ease', // default easing for AOS animations
@@ -23,7 +23,6 @@ AOS.init({
 
 const slideShow = document.querySelector('.slideShow');
 
-// Apply header-shifting images:
 window.addEventListener('DOMContentLoaded', ()=>{
    
    setupSlideShow();
@@ -31,23 +30,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
 });
 
 function changeImageSrc(slideNumber) {
-      
-   // console.log(`slideNumber = ${slideNumber}`);
-   // <img class="slideShow" src="./images/banner01_desk.png" alt="alt shifting-background img1">
    var destination = `./images/banner0${slideNumber}_desk.png`;
-   // console.log(`destination = ${destination}`);
-
-   // var index = slideNumber - 1;
-
-   // slideShow[index].classList.add('hide');
-
    slideShow.setAttribute('src', destination)
-
-
-   // slideShow.classList.toggle('imgAnimation');
-
-   
-
 }
 function setupSlideShow(){
    
@@ -61,3 +45,4 @@ function setupSlideShow(){
    }, 4000)
 
 }
+

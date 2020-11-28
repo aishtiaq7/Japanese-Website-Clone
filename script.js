@@ -48,7 +48,7 @@ window.addEventListener('scroll', () => {
    const aboutTextDiv = document.querySelector('#about-text');
    
    const distance = window.scrollY;
-   console.log(`distance: ${distance}`);
+   // console.log(`distance: ${distance}`);
    document.querySelector("#about-text").style.transform = `translateY(${distance * -0.28}px)`;
    document.querySelector(".about-img").style.transform = `translateY(${distance * -0.10}px)`;
 

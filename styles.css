@@ -35,7 +35,7 @@ button {
   }
 
 :root{
-    
+  --parrallax-value:100px;
 }
 
 body{
@@ -146,7 +146,10 @@ body{
   }
 }
 
+/* *********************************  ABOUT ****************************/
+
 .about-section{
+  padding-top: 60px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -154,6 +157,7 @@ body{
 }
 
 .about-section > img{
+  /* margin-top: 160px; */
   height: 100%;
   width: auto;
   position:absolute;
@@ -168,7 +172,10 @@ body{
 }
 
 .about-text{
+  margin-top: 60px;
+  transform: translateY(var(--parralax-value));
   width: 50%;
+  /* background-color: blueviolet; */
 }
 .horizontal-divider{
   background-color: rgb(201, 201, 201);
@@ -179,7 +186,7 @@ body{
 .about-text h5{
   padding: 10px 20px;
   font-size: 36px;
-  color: grey;
+  color: #808080;
 
 }
 
@@ -187,20 +194,12 @@ body{
 .about-section .about-text p{
   padding: 20px;
   margin: 10px 20px;
-  color: brown;
+  padding-left: 10px;
+  margin-left: 10px;
+  color: black;
 }
 
 .about-section .about-img{
   padding: 20px;
 }
 
-
-#standout{
-  transform: translateY(20%);
-
-}
-
-.inside-div h5{
-  font-size: 38px;
-  padding: 30px;
-}

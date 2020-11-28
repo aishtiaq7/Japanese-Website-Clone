@@ -27,7 +27,48 @@ window.addEventListener('DOMContentLoaded', ()=>{
    
    setupSlideShow();
 
+
+
 });
+
+
+   //GLOBAL SCROLL EVENT
+window.addEventListener('scroll', () => {
+
+   //GET ROOT VALUE
+//    getComputedStyle(document.documentElement)
+//   .getPropertyValue('--my-variable-name'); // #999999
+
+
+   // SET ROOT VALUE
+//    document.documentElement.style
+//  .setProperty('--my-variable-name', 'pink');
+
+
+   const aboutTextDiv = document.querySelector('#about-text');
+   
+   const distance = window.scrollY;
+   console.log(`distance: ${distance}`);
+   document.querySelector("#about-text").style.transform = `translateY(${distance * -0.28}px)`;
+   document.querySelector(".about-img").style.transform = `translateY(${distance * -0.10}px)`;
+
+
+   
+
+})
+
+window.addEventListener('load', () =>{
+   alert("******EVERYTHING LOADED******"); 
+});
+
+
+
+
+
+
+
+
+
 
 function changeImageSrc(slideNumber) {
    var destination = `./images/banner0${slideNumber}_desk.png`;

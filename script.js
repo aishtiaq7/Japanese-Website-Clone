@@ -12,7 +12,7 @@ AOS.init({
    
  
    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-   offset: 80, // offset (in px) from the original trigger point
+   offset: 10, // offset (in px) from the original trigger point
    delay: 0, // values from 0 to 3000, with step 50ms
    duration: 350, // values from 0 to 3000, with step 50ms
    easing: 'ease', // default easing for AOS animations
@@ -35,22 +35,12 @@ window.addEventListener('DOMContentLoaded', ()=>{
    //GLOBAL SCROLL EVENT
 window.addEventListener('scroll', () => {
 
-   //GET ROOT VALUE
-//    getComputedStyle(document.documentElement)
-//   .getPropertyValue('--my-variable-name'); // #999999
-
-
-   // SET ROOT VALUE
-//    document.documentElement.style
-//  .setProperty('--my-variable-name', 'pink');
-
-
    const aboutTextDiv = document.querySelector('#about-text');
    
    const distance = window.scrollY;
    // console.log(`distance: ${distance}`);
-   document.querySelector("#about-text").style.transform = `translateY(${distance * -0.28}px)`;
-   document.querySelector(".about-img").style.transform = `translateY(${distance * -0.10}px)`;
+   document.querySelector("#about-text").style.transform = `translateY(${distance * -0.44}px)`;
+   document.querySelector(".about-img").style.transform = `translateY(${distance * -0.15}px)`;
 
 
    

@@ -18,12 +18,12 @@ button {
     text-shadow: 0px 0px 0px transparent;
   }
   
-  button:hover {
+  /* button:hover {
     background: transparent;
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     text-shadow: 0px 0px 0px transparent;
-  }
+  } */
   
   button:active {
     outline: none;
@@ -46,9 +46,7 @@ body{
   background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url("./images/backgroundTest1.PNG");
   background-repeat: repeat;
   width: 100vw;
-
-  /* TODO: Remove the below code  */
-  height: 950vh; 
+  
   color:  rgb(128,128,128);
 
 } 
@@ -94,7 +92,9 @@ body{
 
 .header{
     /* border: brown 2px solid; */
+    overflow: hidden;
     position: relative;
+    width: 100%;
     height: 100vh;
 }
 .toggleNavButton .toggle-btn{
@@ -181,15 +181,9 @@ body{
   flex-direction: row;
   justify-content: center;
 
+
 }
 
-.about-section > img{
-  /* margin-top: 160px; */
-  height: 100%;
-  width: auto;
-  position:absolute;
-  right:0;
-}
 
 .about-img{
   width: 37%;
@@ -243,4 +237,52 @@ body{
 .about-section .about-img{
   padding: 20px;
 }
+/* *********************************  Paint-Section ****************************/
+.paint-section > h5 {
+  font-weight: 600;
+}
 
+.left-container{
+  width: 80%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 15%;
+}
+.dual-paragraphs{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+
+  margin-top: 90px;
+  /* align-content: center; */
+}
+
+
+.paint-section > img{
+  /* margin-top: 160px; */
+  height: 100%;
+  width: auto;
+  position:absolute;
+  right:0;
+}
+
+.btn{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: 3.2px;
+  /* line-height: 42px; */
+  color: white;
+  background-color: black;
+
+  margin-top: 90px;
+  margin-left: 20px;
+
+  /* margin: 0 0 30px 0; */
+  padding: 20px 55px;
+
+
+
+}

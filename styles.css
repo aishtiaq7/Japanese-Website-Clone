@@ -380,6 +380,18 @@ body{
   flex-grow: 1;
 }
 
+/* .middle-block > .parallax-scroll {
+  font-size: 14px;
+} */
+
+.slide{
+  font-size: 14px;
+  display: none;
+}
+.show-slide{
+  display: block;
+}
+
 .dot-container{
   display: flex;
   justify-content: center;
@@ -390,11 +402,11 @@ body{
   margin: 30px 25px;
   width: 15px;
   height: 15px;
-  background-repeat: grey;
+  background-color: black;
   border-radius: 50%;
 }
 .active{
-  background-color: #FF0000;
+  background-color: red;
 }
 
 .big-quotation{
@@ -409,6 +421,11 @@ body{
   /* line-height: 72px; */
   opacity: 0.10;
 }
+
+
+
+
+
 
 .footer{
   float: right;

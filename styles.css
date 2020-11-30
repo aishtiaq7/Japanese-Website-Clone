@@ -95,7 +95,7 @@ body{
     /* border: brown 2px solid; */
     overflow: hidden;
     position: relative;
-    max-width: 100%;
+    max-width: 100vw;
     max-height: 100vh;
 }
 .toggleNavButton .toggle-btn{
@@ -258,7 +258,8 @@ body{
   width: 80%;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 15%;
+  margin-left: 20%;
+  /* margin-right: 0; */
 }
 .dual-paragraphs{
   display: flex;
@@ -269,12 +270,13 @@ body{
   /* align-content: center; */
 }
 
-.paint-section > img{
+.paint-section.about-text.left-container > img{
   /* margin-top: 160px; */
   max-height: 100%;
   width: auto;
   position: absolute;
   right: 0;
+  margin: 0;
 
 
 }
@@ -299,11 +301,15 @@ body{
 
 /* *********************************  REVERBERATE ****************************/
 .reverberate-section{
+  padding: 0 50px;
   width: 100vw;
 }
 .title{
-  /* float: right; */
-  margin-left: 70%;
+  float: right;
+  margin-right: 10%;
+}
+.title::after{
+  float: none;
 }
 
 .dual-containers{
@@ -317,33 +323,68 @@ body{
 }
 
 .dual-containers > img {
-  /* max-width: 30%; */
   flex-grow: 3;
+  max-width: 40%;
+  padding: 30px 50px;
 }
 
 .text-reverberate{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   flex-grow: 3;
 }
 
 .text-reverberate > .left-quotation {
+  text-align: center;
   align-self: flex-start;
-  flex-grow: 1;
-}
-.text-reverberate > .right-quotation {
-  align-self: flex-end;
   flex-grow: 1;
 
 }
 .text-reverberate > .middle-quotation {
-  /* display: flex;
-  flex-direction: column;
-  */
+  align-self: stretch;
   flex-grow: 2;
 
 } 
+.text-reverberate > .right-quotation {
+  text-align: center;
+  align-self: flex-end;
+  flex-grow: 1;
+}
+
+.dot-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+}
+.dot{
+  margin: 30px 25px;
+  width: 15px;
+  height: 15px;
+  background-repeat: grey;
+  border-radius: 50%;
+}
+.active{
+  background-color: grey;
+}
+
+.big-quotation{
+  font-family: 'DM Serif Display', serif;
+  /* font-family: 'Gayathri', sans-serif; */
+  /* font-weight: 800; */
+  font-size: 180px;
+  font-style: italic ;
+  /* font-style: bold; */
+  letter-spacing: 30px;
+  text-decoration: #e0e0e0;
+  /* line-height: 72px; */
+  opacity: 0.10;
+
+
+
+}
 
 .title-text{
   padding: 20px 20px;

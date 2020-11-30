@@ -222,8 +222,10 @@ body{
 
 }
 .about-text h3{
+  font-style: normal;
+  font-weight: 400;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 
@@ -301,15 +303,38 @@ body{
 
 /* *********************************  REVERBERATE ****************************/
 .reverberate-section{
+  margin: 200px 0;
+  /* margin-top: 200px; */
   padding: 0 50px;
   width: 100vw;
 }
 .title{
-  float: right;
-  margin-right: 10%;
+  /* float: right; */
+  max-width: 30%;
+  margin-left: 63%;
+  transform: translateX(-50%);
+  /* margin-right: 10%; */
 }
-.title::after{
+/* .title::after{
   float: none;
+} */
+.title-text{
+  padding: 20px 20px;
+  padding-top: 100px;
+  font-weight: 800;
+  font-size: 72px;
+  font-style: italic ;
+  font-style: bold;
+  letter-spacing: 3.2px;
+  text-decoration: rgb(128,128,128);
+  line-height: 72px;
+}
+
+.title-text h3{
+  font-style: normal;
+  font-weight: 400;
+  padding: 10px 20px;
+  font-size: 20px;
 }
 
 .dual-containers{
@@ -336,10 +361,12 @@ body{
   flex-grow: 3;
 }
 
+
 .text-reverberate > .left-quotation {
   text-align: center;
   align-self: flex-start;
   flex-grow: 1;
+  /* height: 100; */
 
 }
 .text-reverberate > .middle-quotation {
@@ -367,7 +394,7 @@ body{
   border-radius: 50%;
 }
 .active{
-  background-color: grey;
+  background-color: #FF0000;
 }
 
 .big-quotation{
@@ -381,19 +408,10 @@ body{
   text-decoration: #e0e0e0;
   /* line-height: 72px; */
   opacity: 0.10;
-
-
-
 }
 
-.title-text{
-  padding: 20px 20px;
-  padding-top: 100px;
-  font-weight: 800;
-  font-size: 52px;
-  font-style: italic ;
-  font-style: bold;
-  letter-spacing: 3.2px;
-  text-decoration: rgb(128,128,128);
-  line-height: 72px;
+.footer{
+  float: right;
+  padding: 20px 10px;
 }
+

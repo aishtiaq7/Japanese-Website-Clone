@@ -376,8 +376,10 @@ body{
 } 
 .text-reverberate > .right-quotation {
   text-align: center;
-  align-self: flex-end;
+  /* align-self: flex-end; */
+  align-items: flex-end;
   flex-grow: 1;
+  max-height: 100%;
 }
 
 /* .middle-block > .parallax-scroll {

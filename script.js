@@ -22,41 +22,82 @@ AOS.init({
 });
 
 const slideShow = document.querySelector('.slideShow');
+const slides = document.querySelectorAll('.slide');
+const dotBtn = document.querySelectorAll('.dot');
 
 window.addEventListener('DOMContentLoaded', ()=>{
    
    setupSlideShow();
 
+   console.log(slides);
+   console.log(dotBtn);
+
+   dotBtn.forEach( (btn,btnIndex) => {
+
+      btn.addEventListener('click', (e) =>{
+         // console.log(e);
+
+         
+         console.log('index:' + btnIndex);
+         if ( btn.classList.contains('active') ){
+            return;
+         }
+         else // btn hidden
+         {
+            btn.classList.add('active');
+         }
+
+
+         removeActiveClassFromOtherSlides(btnIndex);
+
+      });
+   });
+
+
+
+
 
 
 });
+
+
+function removeActiveClassFromOtherSlides(btnIndex){
+   console.log('passed in index=' + btnIndex);
+
+   slides.forEach( (slide, slideIndex) => {
+      console.log(slide);
+
+      if( btnIndex == slideIndex ){
+         return;
+         
+      } else if (slide.classList.contains('show-slide') ){
+         
+         console.log('_removing slide');
+         slide.classList.remove('show-slide');
+      }
+
+   });
+}
+
+
+
+
 
 
    //GLOBAL SCROLL EVENT
 window.addEventListener('scroll', () => {
 
    const aboutTextDiv = document.querySelector('#about-text');
-   
    const distance = window.scrollY;
    // console.log(`distance: ${distance}`);
    document.querySelector("#about-text").style.transform = `translateY(${distance * -0.44}px)`;
    document.querySelector(".about-img").style.transform = `translateY(${distance * -0.15}px)`;
-
-
-   
 
 })
 
 window.addEventListener('load', () =>{
    alert("******EVERYTHING LOADED******"); 
 });
-
-
-
-
-
-
-
 
 
 

@@ -28,58 +28,56 @@ const slides = document.querySelectorAll('.slide');
 // const slidesContainer = document.querySelector('.slides-container');
 const middleBlock = document.querySelector('.middle-block');
 const slide = document.querySelectorAll('.slide');
-console.log(slide);
+// console.log(slide);
 // console.log(slidesContainer);
-// console.log(middleBlock);
+
+const dotBtns = document.querySelectorAll('.dot');
 
 window.addEventListener('DOMContentLoaded', ()=>{
    
    setupSlideShow();
 
+   setupSlideChangeOnBtnClick();
 
+});
 
-
-   //SetupTabSection--------------------------------------------------------
-
+function setupSlideChangeOnBtnClick(){
    middleBlock.addEventListener('click', e =>{
-      // console.log('clicked on :');
-      // console.log(e.target);
 
-      const id = e.target.dataset.revid;
-      if( id ){ //only when button is clicked
-         console.log('id:' + id);
-         
+      const id = e.target.dataset.revid; // undefined when you click anywhere else btn a buttn
+                                         // cuz a btn ONLY contains a dataset of 'revid!!
+                                         
+      if( id ){   //only when button is clicked
+
          slide.forEach( (item, slideIndex) =>{
-            console.log(item);
-            console.log('  itemIndex:' + slideIndex);
-
-            //removing all slides
+            //hide all slides
             if(item.classList.contains('show-slide')){
-               console.log('___removing slideIndex:' +slideIndex);
                item.classList.remove('show-slide');
             }
 
-            //show slide you clicked on
-            const slideID = `.slide${id}`;
-            const revealSlide = document.querySelector(slideID);
-            console.log('** you found:');
-            console.log(revealSlide);
-            
-            revealSlide.classList.add('show-slide');
-
-            console.log('________________________________')
-
          });
 
+         //Only show slide you clicked on
+         const slideID = `.slide${id}`;
+         const revealSlide = document.querySelector(slideID);
+         revealSlide.classList.add('show-slide');
 
+
+         //hide all buttons
+         dotBtns.forEach( (btn, btnIndex) => {
+            if( btn.classList.contains('active')){
+               btn.classList.remove('active');
+            }
+         });
+
+         //Add active state to clicked btn
+         e.target.classList.add('active');
 
       }
-
+      
    });
+}
 
-   
-
-});
 
 
 

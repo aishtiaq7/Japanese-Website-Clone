@@ -1,7 +1,7 @@
 <!--
 TODO:
--Feature Parallax effect on About Section
 -Do simple animation on About Section 
+-Copy original text from the cloning website to this clone
 -->
 
 
@@ -14,11 +14,18 @@ TODO:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Japanese Website Clone</title>
     
+    <!-- font-family: 'DM Serif Display', serif; -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <!-- font-family: 'Gayathri', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link type="text/css" rel="stylesheet" href="./styles.css">
 </head>
 <body>
+
     <section class="header">
         <div class="logo">
             <img src="./images/logo.png" alt="alt-logo-text">
@@ -36,36 +43,167 @@ TODO:
         </div>
     </section>
 
+    <!-- *********************************  ABOUT **************************** -->
     <section class="about-section container" id="about">
         <div class="about-img">
-            <img src="./images/guyPortrait.PNG" a >
+            <img src="./images/guyPortrait.PNG" alt="alt guyPortrait.PNG" >
         </div>
         
-        <img  src="./images/block_paint_img.png" alt="alt-block_paint_img.png">
-
-        <div class="about-text">
-            <h5 data-aos="zoom-in-right" id="about-target" >About</h5>
+        <div id="about-text" class="about-text">
+            <h5 data-aos="zoom-out" id="about-target" >About</h5>
+            <h3 data-aos="zoom-out" >關於 鄧志浩</h3>
             
             <div class="horizontal-divider"></div>
             
-            <p >
-                <span data-aos="zoom-in-right" > strum beatae dolores veniam ipsam provident, quae inventore a quas molestias </span>
-                <span data-aos="zoom-in-right" > eligendi, voluptatum voluptatibus, aliquid id culpa labore vero ducimus eaque facilis?</span>
-                <span data-aos="zoom-in-right" > illum aspernatur iusto alias voluptates quos nemo reiciendis aliquid perspici</span>
-                <span data-aos="zoom-in-right" > atis amet dolores magni minima doloremque ullam! Reprehenderit accusantium no</span>
-                <span data-aos="zoom-in-right" > ipsum dolor sit, amet consectetur adipisicing elit. Accusamus dolorem, </span>
-                <span data-aos="zoom-in-right" >  ipsum dolor sit, amet consectetur adipisicing elit. Accusamus dolorem, </span>
-                <span data-aos="zoom-in-right" > illum aspernatur iusto alias voluptates quos nemo reiciendis aliquid perspici</span>
-                <span data-aos="zoom-in-right" > atis amet dolores magni minima doloremque ullam! Reprehenderit accusantium no</span>
-                <span data-aos="zoom-in-right" > strum beatae dolores veniam ipsam provident, quae inventore a quas molestias </span>
-                <span data-aos="zoom-in-right" > eligendi, voluptatum voluptatibus, aliquid id culpa labore vero ducimus eaque f</span>
-            </p>
+            <div class="parallax-scroll" >
+                <p data-aos="zoom-out" > 鄧志浩，祖籍廣東，1954年生於台灣。 </p>
+                <p data-aos="zoom-out" > 藝術創作橫跨美術、音樂、戲劇等專業領域。</p>
+                <p data-aos="zoom-out" > 個人風格鮮明的抽象畫畫家、民歌手、兒童戲劇導演、編劇、演員、作家、創意課程講師、手作木工、民宿餐廳經營者，是個多元發展的藝術家。</p>
+                <p data-aos="zoom-out" > 1995年因緣際會師承新加坡抽象畫大師黃意會，自此開啟其抽象畫創作人生。</p>
+                <p data-aos="zoom-out" > 鄧志浩因其豐富多元的創作背景，內化厚實的生活底蘊，使其作品呈現靜謐、精妙、純淨、優雅，生命力度盈沛飽滿的意境。 </p>
+                
+                <p data-aos="zoom-out" > <br>框外世界才是創作的理由』是鄧志浩創作的最佳註解！ </p>
+                <p data-aos="zoom-out" > Originating from Guangdong, born in 1954 in Taiwan. Calvin Chih-Hao Teng started as a self-taught painter.</p>
+                <p data-aos="zoom-out" > <br>For Calvin, life has always been exploring deep into the vast unknown. Throughout his artistic career, he has ventured into the fields of folk song singer and songwriter, author, to managing his own</p>
+                <p data-aos="zoom-out" > restaurant. Calvin has also respectfully dedicated 30 years perfecting his craft in children's theater as a director, playwright, and actor. </p>
+                <p data-aos="zoom-out" > During his travels in 1995, Calvin was fortunate to encounter a master painter from Singapore. Under his guidance, Calvin found his love and passion for abstract painting, a world he was</p>
+                <p data-aos="zoom-out" > previously unacquainted with. In time, Calvin ultimately shifted his paradigm from composing realism to abstract.</p>
+                <p data-aos="zoom-out" > Each painting imbues elements from all realms Calvin has walked upon through his journey of life. The audience is drawn in by wandering thoughts as each composition emotionally unites them</p>
+                <p data-aos="zoom-out" > with grace, purifying and rejuvenating the soul. Calvin has concluded art is an entity that propels him onward allowing him to pursue peace of mind.</p>
+            </div>
         </div>
     </section>
+
+    <!-- *********************************  PAINT **************************** -->
+    <section class="paint-section about-text left-container" > 
+        <h5 data-aos="zoom-out">I Paint, Therefore I Am</h5>
+        <h3 data-aos="zoom-out">我畫故我在</h3>
+
+        <img  src="./images/block_paint_img.png" alt="alt-block_paint_img.png">
+
+        <div class="dual-paragraphs">
+            <div class="left parallax-scroll">
+                <p data-aos="zoom-out" > 不喜繁文縟節, </p>
+                <p data-aos="zoom-out" > 不愛引經據點, </p>
+                <p data-aos="zoom-out" > 不擅長篇大論, </p>
+                <p data-aos="zoom-out" > 謹以真樸拙本性剖析分享創作理念, </p>
+                <p data-aos="zoom-out" > 自覺體悟生命如常流動,
+                </p>
+                <p data-aos="zoom-out" > 遇見陽光, 空氣, 水, 畫作開始生養氣息, </p>
+                <p data-aos="zoom-out" > 懷中華根源文化底蘊, </p>
+                <p data-aos="zoom-out" > 在虛實相生, 立體想像空間遊走, </p>
+                <p data-aos="zoom-out" > 時而戲劇張力緊弛, </p>
+                <p data-aos="zoom-out" > 時而韻律節奏音揚, </p>
+                <p data-aos="zoom-out" > 純化詩情為畫意, </p>
+                <p data-aos="zoom-out" > 一切運行, </p>
+                <p data-aos="zoom-out" > 不只為成就一幅幅會呼吸的有機畫作, </p>
+                <p data-aos="zoom-out" > 更為打開 一扇心靈之窗。 </p>
+                <p data-aos="zoom-out" > 點墨無形, 空刀留影, </p>
+                <p data-aos="zoom-out" > 我畫故我在 </p>
+
+            </div>
+            <div class="right parallax-scroll">
+                <p data-aos="zoom-out" > Don’t like over-elaborate formalities,</p>
+                <p data-aos="zoom-out" > Don’t enjoy citing classic works,</p>
+                <p data-aos="zoom-out" > Not good at giving long-winded statement,</p>
+                <p data-aos="zoom-out" > I only use ingenuity, simplicity, modesty, and intuition to share and examine my notion of creativity,</p>
+                <p data-aos="zoom-out" > Through self-awareness, I realize that life goes on,</p>
+                <p data-aos="zoom-out" > Through sunlight, air and water, my paintings begin to breathe,</p>
+                <p data-aos="zoom-out" > With deep Chinese cultural influences,</p>
+                <p data-aos="zoom-out" > I wonder through the imaginary, three-dimensional space constructed by virtual and real images,</p>
+                <p data-aos="zoom-out" > Or with calming rhythms at another,</p>
+                <p data-aos="zoom-out" > I turn poetry into paintings,</p>
+                <p data-aos="zoom-out" > Everything I paint,</p>
+                <p data-aos="zoom-out" > Has not only become living artworks that breathe,</p>
+                <p data-aos="zoom-out" > But also a window to the soul,</p>
+                <p data-aos="zoom-out" > Like shadows casted by wielding a sword,</p>
+                <p data-aos="zoom-out" > Intangibles are there to paint,</p>
+                <p data-aos="zoom-out" > I Paint, Therefore I Am.</p>
+            </div>
+        </div>
+
+        <button class="btn">Works</button>
+        
+    </section>
+
+    <section class="reverberate-section">
+        <div class="title title-text">
+            <h5 data-aos="zoom-out">Reverberate</h5>
+            <h3 data-aos="zoom-out">迴響</h3>
+
+            <div class="horizontal-divider"></div>
+        </div>
+
+        <div class="dual-containers">
+            <img src="./images/block_reverberate_img.jpg" alt="alt block_reverberate_img.jpg img">
+
+            <div class="text-reverberate">
+                <!-- LEFT -->
+                <div class="left-quotation big-quotation">“</div>
+
+                <!-- MIDDLE -->
+                <div class="middle-block">
+                    <div class="parallax-scroll" id="content" >
+                        <div class="slides-container">
+                            <div class="slide show-slide slide1">
+                                <p>鄧先生的畫作絕對有豐潤任何空間的條件! 如史詩般的畫面內蘊力度充沛的磁場狀態,柔順的線條,協調不擾存在的空間感!</p>
+                                <p><br>Architect Cape Town 建築公司 開普敦 南非</p>
+                                <p><br>They are definitely of the level that serves to enhance any space. The epic landscapes with strong atmospheric conditions, means that there are not too many strong lines that create tension and disturb the room.</p>
+                                <p><br>Architect Cape Town ,Cape Town, South Africa</p>
+                            </div>
+                            <div class="slide slide2">
+                                <p>內心對鄧先生的畫作由衷感動莫名! 您的藝術創作完美融合宋朝傳統山水水墨畫的意象, 更貫通當代西方現代抽象主義的表現形式。我未曾在日本及世界各地的藝博館見識過此類畫風的藝術品!</p>
+                                <p><br>Yuusuke Karasawa Architects 建築公司 東京 日本</p>
+                                <p><br>I am moved by looking at Mr. Teng’s works from the bottom of my heart. I think Calvin’s work achieves great combination of the tradition of ink painting and landscape painting on Song Dynasty in China and the abstract expressionism on modern and contemporary Western Society. I have never seen that kind of artwork in Japan and in museums from around the world.</p>
+                                <p><br>Yuusuke Karasawa Architects Tokyo, Japan</p>
+                            </div>
+                            <div class="slide slide3">
+                                <p>千山淙雪出雲端</p>
+                                <p><br>詩人 鄭愁予</p>
+                                <p><br>The overflowing snow blankets the layers of endless mountains, and reaches into the clouds.</p>
+                                <p><br>Cheng Chou-Yu, the renowned poet</p>
+                            </div>
+                            <div class="slide slide4">
+                                <p>鄧志浩先生的作品拋離形制，追索象外之象，畫面雲水流轉、極具中國水墨意味，用複合媒介和油彩體現了中國哲學所特有的天人合一， 虛靜忘我的精神境界。 更加讓人嘆為觀止的是，作為一個曾經的音樂家，他化聽覺形象為視覺形象，竟把旋律、節奏、和聲、複調、調性、曲式這些只有通過聲音才能傳達的東西“畫”了出來。</p>
+                                <p><br>中國知名藝評家 卜賀</p>
+                                <p><br>In his work, Mr. Calvin Teng has gotten rid of the restrains of forms; he sought after the subtlety beyond the imagery. In the painting, we could see images of clouds and water surging and flowing, which capture the essence of Chinese paintings. With a combination of various media and oil paints, Teng expresses the notion of unity of heaven and mankind, and a virtual yet serene state where one becomes oblivious of the self – a concept that is unique to Chinese philosophy. What amazes us more is that as a former musician, he transformed auditory notes into visual images. To our surprise, he “painted out” melody, rhythm, harmony, polyphony, tonality, and musical form, which were elements that could only be expressed through sounds.</p>
+                                <p><br>Bu He, the prominent Chinese art critic</p>
+                            </div>
+                            <div class="slide slide5">
+                                <p>鄧志浩老師的作品可看到一種自然滴流潑濺、獷悍昂揚、冷峻蒼潤、氤氳渾沌的繪畫語境，連接藝術家心靈的「鏡真」，並以造境的方式及象外所產生的間接隱喻的意圖，產生天地之間協調的悲壯美，也是一種明鏡而玄的美感。是大自然的象徵，又是在時間的流逝中飽嘗著一種沖動和神性的力量，更把感情、文學、哲學底蘊包容其作品之中。</p>
+                                <p><br>藝術家 牧雲人 張貞貴</p>
+                                <p><br>Calvin Teng’s artwork depicts many different forms of nature: dripping, splashing, wild, resilient, cruel, lush, misty or murky, all of which leads to his true heart. Through creating landscape art, Calvin spawns metaphors to resemble the harmonious and solemn beauty of the earth. His artwork contains passionate, poetic and philosophical essence, which epitomizes Mother Nature and will stand as a divine force with the passage of time.</p>
+                                <p><br>Artist, Mu Yun Ren Zhang Zhen Gui</p>
+                            </div>
+                        </div>
+
+                    </div> 
+
+                    <div class="dot-container" id="dot-container" >
+                        <button class="dot active" data-revId="1"></button>
+                        <button class="dot" data-revId="2"></button>
+                        <button class="dot" data-revId="3"></button>
+                        <button class="dot" data-revId="4"></button>
+                        <button class="dot" data-revId="5"></button>
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="right-quotation big-quotation">”</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="parallax-scroll" >
+                <p > © Calvin C . H Teng , Design by 樂岑設計 </p>
+            </div>
+        </div>
+    </footer>
     
 </body>
     <!-- Animation Library -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>  
 
     <script src="./script.js"></script>
 </html>

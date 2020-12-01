@@ -12,7 +12,7 @@ AOS.init({
    
  
    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-   offset: 80, // offset (in px) from the original trigger point
+   offset: 10, // offset (in px) from the original trigger point
    delay: 0, // values from 0 to 3000, with step 50ms
    duration: 350, // values from 0 to 3000, with step 50ms
    easing: 'ease', // default easing for AOS animations
@@ -22,12 +22,82 @@ AOS.init({
 });
 
 const slideShow = document.querySelector('.slideShow');
+const slides = document.querySelectorAll('.slide');
+
+// const middleBlock = document.querySelectorAll('.middle-block');
+// const slidesContainer = document.querySelector('.slides-container');
+const middleBlock = document.querySelector('.middle-block');
+const slide = document.querySelectorAll('.slide');
+// console.log(slide);
+// console.log(slidesContainer);
+
+const dotBtns = document.querySelectorAll('.dot');
 
 window.addEventListener('DOMContentLoaded', ()=>{
    
    setupSlideShow();
 
+   setupSlideChangeOnBtnClick();
+
 });
+
+function setupSlideChangeOnBtnClick(){
+   middleBlock.addEventListener('click', e =>{
+
+      const id = e.target.dataset.revid; // undefined when you click anywhere else btn a buttn
+                                         // cuz a btn ONLY contains a dataset of 'revid!!
+                                         
+      if( id ){   //only when button is clicked
+
+         slide.forEach( (item, slideIndex) =>{
+            //hide all slides
+            if(item.classList.contains('show-slide')){
+               item.classList.remove('show-slide');
+            }
+
+         });
+
+         //Only show slide you clicked on
+         const slideID = `.slide${id}`;
+         const revealSlide = document.querySelector(slideID);
+         revealSlide.classList.add('show-slide');
+
+
+         //hide all buttons
+         dotBtns.forEach( (btn, btnIndex) => {
+            if( btn.classList.contains('active')){
+               btn.classList.remove('active');
+            }
+         });
+
+         //Add active state to clicked btn
+         e.target.classList.add('active');
+
+      }
+      
+   });
+}
+
+
+
+
+
+   //GLOBAL SCROLL EVENT
+window.addEventListener('scroll', () => {
+
+   const aboutTextDiv = document.querySelector('#about-text');
+   const distance = window.scrollY;
+   // console.log(`distance: ${distance}`);
+   document.querySelector("#about-text").style.transform = `translateY(${distance * -0.44}px)`;
+   document.querySelector(".about-img").style.transform = `translateY(${distance * -0.15}px)`;
+
+})
+
+window.addEventListener('load', () =>{
+   alert("******EVERYTHING LOADED******"); 
+});
+
+
 
 function changeImageSrc(slideNumber) {
    var destination = `./images/banner0${slideNumber}_desk.png`;

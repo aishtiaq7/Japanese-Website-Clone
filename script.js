@@ -23,63 +23,63 @@ AOS.init({
 
 const slideShow = document.querySelector('.slideShow');
 const slides = document.querySelectorAll('.slide');
-const dotBtn = document.querySelectorAll('.dot');
+
+// const middleBlock = document.querySelectorAll('.middle-block');
+// const slidesContainer = document.querySelector('.slides-container');
+const middleBlock = document.querySelector('.middle-block');
+const slide = document.querySelectorAll('.slide');
+console.log(slide);
+// console.log(slidesContainer);
+// console.log(middleBlock);
 
 window.addEventListener('DOMContentLoaded', ()=>{
    
    setupSlideShow();
 
-   console.log(slides);
-   console.log(dotBtn);
 
-   dotBtn.forEach( (btn,btnIndex) => {
 
-      btn.addEventListener('click', (e) =>{
-         // console.log(e);
 
+   //SetupTabSection--------------------------------------------------------
+
+   middleBlock.addEventListener('click', e =>{
+      // console.log('clicked on :');
+      // console.log(e.target);
+
+      const id = e.target.dataset.revid;
+      if( id ){ //only when button is clicked
+         console.log('id:' + id);
          
-         console.log('index:' + btnIndex);
-         if ( btn.classList.contains('active') ){
-            return;
-         }
-         else // btn hidden
-         {
-            btn.classList.add('active');
-         }
+         slide.forEach( (item, slideIndex) =>{
+            console.log(item);
+            console.log('  itemIndex:' + slideIndex);
+
+            //removing all slides
+            if(item.classList.contains('show-slide')){
+               console.log('___removing slideIndex:' +slideIndex);
+               item.classList.remove('show-slide');
+            }
+
+            //show slide you clicked on
+            const slideID = `.slide${id}`;
+            const revealSlide = document.querySelector(slideID);
+            console.log('** you found:');
+            console.log(revealSlide);
+            
+            revealSlide.classList.add('show-slide');
+
+            console.log('________________________________')
+
+         });
 
 
-         removeActiveClassFromOtherSlides(btnIndex);
 
-      });
-   });
-
-
-
-
-
-
-});
-
-
-function removeActiveClassFromOtherSlides(btnIndex){
-   console.log('passed in index=' + btnIndex);
-
-   slides.forEach( (slide, slideIndex) => {
-      console.log(slide);
-
-      if( btnIndex == slideIndex ){
-         return;
-         
-      } else if (slide.classList.contains('show-slide') ){
-         
-         console.log('_removing slide');
-         slide.classList.remove('show-slide');
       }
 
    });
-}
 
+   
 
+});
 
 
 

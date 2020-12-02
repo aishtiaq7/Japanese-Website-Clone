@@ -21,7 +21,7 @@ AOS.init({
    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
 
-const slideShow = document.querySelector('.slideShow');
+const slideShow = document.querySelector('.slideShow'); 
 const slides = document.querySelectorAll('.slide');
 const middleBlock = document.querySelector('.middle-block');
 const slide = document.querySelectorAll('.slide');

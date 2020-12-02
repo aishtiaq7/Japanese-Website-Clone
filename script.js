@@ -30,6 +30,9 @@ const middleBlock = document.querySelector('.middle-block');
 const slide = document.querySelectorAll('.slide');
 // console.log(slide);
 // console.log(slidesContainer);
+const sidebar = document.getElementById("sidebar");
+const toggleNavButton = document.getElementById("toggleNavButton");
+const crossButton = document.getElementById("cross-button");
 
 const dotBtns = document.querySelectorAll('.dot');
 
@@ -39,7 +42,16 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
    setupSlideChangeOnBtnClick();
 
+   //sidebar toggle 
+   toggleNavButton.addEventListener('click', removeSidbar);
+   crossButton.addEventListener('click', removeSidbar);
+
+
+
 });
+function removeSidbar (){
+   sidebar.classList.toggle('visibility-hidden');
+}
 
 function setupSlideChangeOnBtnClick(){
    middleBlock.addEventListener('click', e =>{

@@ -23,17 +23,11 @@ AOS.init({
 
 const slideShow = document.querySelector('.slideShow');
 const slides = document.querySelectorAll('.slide');
-
-// const middleBlock = document.querySelectorAll('.middle-block');
-// const slidesContainer = document.querySelector('.slides-container');
 const middleBlock = document.querySelector('.middle-block');
 const slide = document.querySelectorAll('.slide');
-// console.log(slide);
-// console.log(slidesContainer);
 const sidebar = document.getElementById("sidebar");
 const toggleNavButton = document.getElementById("toggleNavButton");
 const crossButton = document.getElementById("cross-button");
-
 const dotBtns = document.querySelectorAll('.dot');
 
 window.addEventListener('DOMContentLoaded', ()=>{
@@ -49,6 +43,23 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
 
 });
+
+
+window.addEventListener('scroll', () => {
+
+   const aboutTextDiv = document.querySelector('#about-text');
+   const distance = window.scrollY;
+   // console.log(`distance: ${distance}`);
+   document.querySelector("#about-text").style.transform = `translateY(${distance * -0.44}px)`;
+   document.querySelector(".about-img").style.transform = `translateY(${distance * -0.15}px)`;
+
+});
+
+window.addEventListener('load', () =>{
+   alert("******EVERYTHING LOADED******"); 
+});
+
+
 function removeSidbar (){
    sidebar.classList.toggle('visibility-hidden');
 }
@@ -89,26 +100,6 @@ function setupSlideChangeOnBtnClick(){
       
    });
 }
-
-
-
-
-
-   //GLOBAL SCROLL EVENT
-window.addEventListener('scroll', () => {
-
-   const aboutTextDiv = document.querySelector('#about-text');
-   const distance = window.scrollY;
-   // console.log(`distance: ${distance}`);
-   document.querySelector("#about-text").style.transform = `translateY(${distance * -0.44}px)`;
-   document.querySelector(".about-img").style.transform = `translateY(${distance * -0.15}px)`;
-
-})
-
-window.addEventListener('load', () =>{
-   alert("******EVERYTHING LOADED******"); 
-});
-
 
 
 function changeImageSrc(slideNumber) {
